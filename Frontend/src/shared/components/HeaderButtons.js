@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import GoogleLogin from "react-google-login";
 import { Link } from "react-router-dom";
 
-const HeaderButtons = ({ isLoggedIn, setLogin, cantCarrito }) => {
+const HeaderButtons = ({ isLoggedIn, setLogin }) => {
   const login = (res) => {
     setLogin(true);
     localStorage.setItem("token", res.tokenId);
@@ -63,13 +63,7 @@ const HeaderButtons = ({ isLoggedIn, setLogin, cantCarrito }) => {
             Gestionar Productos
           </Button>
         </Link>
-
-        <Link to="/ProductosDisponibles">
-          <Button variant="danger" className="me-3">
-            Productos
-          </Button>
-        </Link>
-
+ 
         <Link to="/CrearUsuario">
           <Button variant="danger" className="me-3">
             Crear Usuarios
@@ -93,7 +87,7 @@ const HeaderButtons = ({ isLoggedIn, setLogin, cantCarrito }) => {
     return (
       <div>
         <GoogleLogin
-          clientId="1072646916283-tuqtgn75i6kb0p8u8reg1u75d9n88id3.apps.googleusercontent.com"
+          clientId="151788115467-1niolrabbcftlb4kmp160ejrfutkbb3c.apps.googleusercontent.com"
           buttonText="Login"
           onSuccess={login}
           onFailure={loginError}

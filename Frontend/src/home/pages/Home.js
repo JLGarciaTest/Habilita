@@ -1,9 +1,9 @@
-import Casita from "./Casita.png";
+import VentaCelu from "../img/Fondo.jpg";
 
 const Home = ({ isLoggedIn, carrito, setCarrito }) => {
   return (
     <div align="center">
-      <img src={Casita} width="850" height="850" alt="Casita"></img>
+      <img src={VentaCelu} width="850" height="850" alt="VentaCelu"></img>
     </div>
   );
 };

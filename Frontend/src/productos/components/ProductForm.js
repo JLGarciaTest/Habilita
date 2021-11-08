@@ -53,7 +53,7 @@ const ProductForm = ({ handleChange, handleClick, categorias, formValue }) => {
           onChange={handleChange}
           value={formValue.categoria}
         >
-          <option>Seleccione una categoria</option>
+          <option>gama</option>
           {categorias.map((categoria) => (
             <option key={categoria._id} value={categoria._id}>
               {categoria.nombre}
