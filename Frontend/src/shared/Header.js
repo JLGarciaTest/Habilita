@@ -4,16 +4,16 @@ import Nav from "react-bootstrap/Nav";
 
 import HeaderButtons from "./components/HeaderButtons";
 
-const Header = ({ isLoggedIn, login, cantCarrito }) => {
+const Header = ({ isLoggedIn, login}) => {
   return (
-    <Navbar bg="danger" variant="light">
-      <Container>
+    <Navbar bg="info" variant="light">
+      <Container >
         <Navbar.Brand href="/"> </Navbar.Brand>
         <Nav className="justify-content-end">
           <HeaderButtons
             isLoggedIn={isLoggedIn}
             setLogin={login}
-            cantCarrito={cantCarrito}
+          //  cantCarrito={cantCarrito}
           />
         </Nav>
       </Container>
