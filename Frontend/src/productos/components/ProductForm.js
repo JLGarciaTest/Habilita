@@ -5,7 +5,7 @@ const ProductForm = ({ handleChange, handleClick, categorias, formValue }) => {
   return (
     <Form>
       <Form.Group className="mb-3">
-        <Form.Label>Nombre</Form.Label>
+        <Form.Label>Marca</Form.Label>
         <Form.Control
           type="text"
           name="title"
@@ -15,11 +15,11 @@ const ProductForm = ({ handleChange, handleClick, categorias, formValue }) => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Descripción</Form.Label>
+        <Form.Label>Referencia</Form.Label>
         <Form.Control
-          as="textarea"
+          type="text"
           name="description"
-          style={{ height: "50px" }}
+          //style={{ height: "50px" }}
           onChange={handleChange}
           value={formValue.description}
         />
@@ -46,14 +46,14 @@ const ProductForm = ({ handleChange, handleClick, categorias, formValue }) => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Categoria</Form.Label>
+        <Form.Label>Gama</Form.Label>
         <Form.Select
           aria-label="Default select example"
           name="categoria"
           onChange={handleChange}
           value={formValue.categoria}
         >
-          <option>gama</option>
+          <option>Seleccionar</option>
           {categorias.map((categoria) => (
             <option key={categoria._id} value={categoria._id}>
               {categoria.nombre}
@@ -62,7 +62,7 @@ const ProductForm = ({ handleChange, handleClick, categorias, formValue }) => {
         </Form.Select>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+     {/* <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Check
           type="checkbox"
           id="default-checkbox"
@@ -71,15 +71,15 @@ const ProductForm = ({ handleChange, handleClick, categorias, formValue }) => {
           value={formValue.disponible}
           onChange={handleChange}
         />
-      </Form.Group>
+          </Form.Group> */}
 
-      <Button type="button" variant="danger">
+      <Button type="button" variant="warning">
         Cancelar
       </Button>
       <Button
         onClick={handleClick}
         type="button"
-        variant="danger"
+        variant="info"
         className="float-end"
       >
         Guardar

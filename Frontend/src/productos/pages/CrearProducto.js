@@ -5,14 +5,10 @@ import ProductForm from "../components/ProductForm";
 
 const CrearProducto = ({ productos, setProductos }) => {
   const categorias = [
-    { id: 1, nombre: "Moderno" },
-    { id: 2, nombre: "Informal" },
-    { id: 3, nombre: "Bohemio" },
-    { id: 4, nombre: "Clasico" },
-    { id: 5, nombre: "Deportes" },
-    { id: 6, nombre: "Elegante" },
-    { id: 7, nombre: "Casual" },
-    { id: 8, nombre: "Juvenil" },
+    { id: 1, nombre: "Alta" },
+    { id: 2, nombre: "Media" },
+    { id: 3, nombre: "Flecha" },
+    
   ];
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
@@ -38,13 +34,13 @@ const CrearProducto = ({ productos, setProductos }) => {
     } else {
       setSuccess(apiResponse);
       setProductos([...productos, newProduct]);
-      //history.push("/");
+      
     }
   };
 
   return (
     <React.Fragment>
-      <h1 className="text-center mt-5 mb-5">Crear producto</h1>
+      <h1 className="text-center mt-5 mb-5" text-color="green">Registrar producto</h1>
       <Container>
         <Row className="d-flex justify-content-center align-items-center">
           <Col xs={6}>

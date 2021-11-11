@@ -13,7 +13,7 @@ exports.addProduct = (req, res) => {
     price: req.body.price,
     url: req.body.url,
     categoria: req.body.categoria,
-    disponible: req.body.disponible,
+    //disponible: req.body.disponible,
   });
 
   productosAdd.save().then((createdProduct) => {
