@@ -14,12 +14,12 @@ const CrearUsuario = ({ usuarios, setUsuarios }) => {
   const [success, setSuccess] = useState();
 
   const [newUsuario, setNewUsuario] = useState({
-    Documento: 0,
+    Documento: "",
     NombreApellido: "",
-    Telefono: 0,
+    Telefono: "",
     Correo: "",
     Sucursal: "",
-    Rol: "",
+    Rol: 2,
   });
 
   const handleChange = (event) => {
@@ -40,10 +40,10 @@ const CrearUsuario = ({ usuarios, setUsuarios }) => {
 
   return (
     <React.Fragment>
-      <h1 className="text-center mt-5 mb-5">Asignacion de Usuarios</h1>
+      <h1 className="text-center mt-5 mb-5">Creación de Usuarios</h1>
       <Container>
         <Row className="d-flex justify-content-center align-items-center">
-          <Col xs={6}>
+          <Col xs={5}>
             {error && <Alert variant="danger">{error}</Alert>}
             {success && <Alert variant="success">{success}</Alert>}
             <UsuariosForm

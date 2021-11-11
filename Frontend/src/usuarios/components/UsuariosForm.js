@@ -7,7 +7,7 @@ const UsuariosForm = ({ handleChange, handleClick, formValue }) => {
       <Form.Group className="mb-3">
         <Form.Label>Documento</Form.Label>
         <Form.Control
-          type="number"
+          type="text"
           name="Documento"
           onChange={handleChange}
           value={formValue.Documento}
@@ -15,7 +15,7 @@ const UsuariosForm = ({ handleChange, handleClick, formValue }) => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Nombre y Apellido</Form.Label>
+        <Form.Label>Nombre completo</Form.Label>
         <Form.Control
           type="text"
           name="NombreApellido"
@@ -27,7 +27,7 @@ const UsuariosForm = ({ handleChange, handleClick, formValue }) => {
       <Form.Group className="mb-3">
         <Form.Label>Telefono</Form.Label>
         <Form.Control
-          type="number"
+          type="text"
           name="Telefono"
           onChange={handleChange}
           value={formValue.Telefono}
@@ -64,14 +64,14 @@ const UsuariosForm = ({ handleChange, handleClick, formValue }) => {
         />
       </Form.Group>
 
-      <Button type="button" variant="danger">
+      <Button type="button" variant="warning">
         Cancelar
       </Button>
 
       <Button
         onClick={handleClick}
         type="button"
-        variant="danger"
+        variant="info"
         className="float-end"
       >
         Guardar
