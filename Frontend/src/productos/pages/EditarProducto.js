@@ -56,8 +56,8 @@ const EditarProducto = ({ productos, setProductos }) => {
       <Container>
         <Row className="d-flex justify-content-center align-items-center">
           <Col xs={6}>
-            {error && <Alert variant="danger">{error}</Alert>}
-            {success && <Alert variant="success">{success}</Alert>}
+            {error && <Alert variant="info">{error}</Alert>}
+            {success && <Alert variant="warning">{success}</Alert>}
             <ProductForm
               handleChange={handleChange}
               handleClick={handleClick}

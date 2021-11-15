@@ -7,14 +7,10 @@ import VentasForm from "../components/VentasForm";
 const EditarVenta = ({ ventas, setVentas }) => {
   const history = useHistory();
   const categorias = [
-    { id: 1, nombre: "Moderno" },
-    { id: 2, nombre: "Informal" },
-    { id: 3, nombre: "Bohemio" },
-    { id: 4, nombre: "Clasico" },
-    { id: 5, nombre: "Deportes" },
-    { id: 6, nombre: "Elegante" },
-    { id: 7, nombre: "Casual" },
-    { id: 8, nombre: "Juvenil" },
+    { id: 1, nombre: "Alta" },
+    { id: 2, nombre: "Media" },
+    { id: 3, nombre: "Flecha" },
+   
   ];
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
@@ -23,10 +19,10 @@ const EditarVenta = ({ ventas, setVentas }) => {
   const [newVenta, setNewVenta] = useState({
     Fecha_Venta: "",
     Producto: "",
-    Referencia: 0,
+    Referencia: "",
     Precio: 0,
-    Descripcion: "",
-    Sucursal: "",
+    //Descripcion: "",
+    //Sucursal: "",
     Vendedor: "",
     Categoria: "",
   });

@@ -12,8 +12,8 @@ exports.addVentas = (req, res) => {
     Producto: req.body.Producto,
     Referencia: req.body.Referencia,
     Precio: req.body.Precio,
-    Descripcion: req.body.Descripcion,
-    Sucursal: req.body.Sucursal,
+    //Descripcion: req.body.Descripcion,
+    //Sucursal: req.body.Sucursal,
     Vendedor: req.body.Vendedor,
     Categoria: req.body.Categoria,
   });

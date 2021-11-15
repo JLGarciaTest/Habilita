@@ -1,7 +1,7 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
+const VentasForm = ({ handleChange, handleClick, categorias, vendedores ,formValue }) => {
   return (
     <Form>
       <Form.Group className="mb-3">
@@ -43,7 +43,7 @@ const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
           value={formValue.Precio}
         />
       </Form.Group>
-
+{/*
       <Form.Group className="mb-3">
         <Form.Label>Descripción</Form.Label>
         <Form.Control
@@ -64,26 +64,42 @@ const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
           value={formValue.Sucursal}
         />
       </Form.Group>
-
+*/}
       <Form.Group className="mb-3">
         <Form.Label>Vendedor</Form.Label>
-        <Form.Control
+        
+      {/*  <Form.Control
           type="text"
           name="Vendedor"
           onChange={handleChange}
           value={formValue.Vendedor}
         />
+      */}
+        <Form.Select
+          aria-label="Default select example"
+          name="Vendedor"
+          onChange={handleChange}
+          value={formValue.categoria}
+        >
+          <option>Seleccione Vendedor</option>
+          {vendedores.map((categoria) => (
+            <option key={categoria._id} value={categoria._id}>
+              {categoria.nombre}
+            </option>
+          ))}
+        </Form.Select>
+
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Categoria</Form.Label>
+        <Form.Label>Gama</Form.Label>
         <Form.Select
           aria-label="Default select example"
           name="Categoria"
           onChange={handleChange}
           value={formValue.categoria}
         >
-          <option>Seleccione una categoria</option>
+          <option>Seleccione la Gama</option>
           {categorias.map((categoria) => (
             <option key={categoria._id} value={categoria._id}>
               {categoria.nombre}
@@ -91,7 +107,7 @@ const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
           ))}
         </Form.Select>
       </Form.Group>
-
+{/*
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Check
           type="checkbox"
@@ -102,14 +118,14 @@ const VentasForm = ({ handleChange, handleClick, categorias, formValue }) => {
           onChange={handleChange}
         />
       </Form.Group>
-
-      <Button type="button" variant="danger">
+*/}
+      <Button type="button" variant="warning">
         Cancelar
       </Button>
       <Button
         onClick={handleClick}
         type="button"
-        variant="danger"
+        variant="info"
         className="float-end"
       >
         Guardar
